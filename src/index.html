@@ -8,24 +8,23 @@
 <!--formulario-->
   
     <!--RangoDeSaltos-->
-    <input type="number" id="jumpt" name="rango" min="0" max="3">
+    <input type="number" id="jumpt"  name="rango"  min="1" max="26">
       <!--<input type="submit" value="">-->
     <!--ParaEncriptar-->
-    <input type="text" id="first" name="encriptartext" value="">
-    <input type="submit" value="ENCRIPTAR" onclick="encriptar()">
+    <input type="text" id="first" placeholder="Ingresa el titulo" name="encriptartext" value="">
+    <input type="button" value="ENCRIPTAR" onclick="cipher.encriptar()">
     <!--ParaDescencriptar-->
-    <input type="text" id="second" name="descencriptartext" value="">
-    <input type="submit" value="DESCENCRIPTAR" onclick="descencriptar()">
-    <!--ParaDescencriptar-->
-
-
-
-
-  
+    <input type="text" id="second" name="descencriptartext" placeholder="Ingresa tu código" value="">
+    <input type="button" value="DESCENCRIPTAR" onclick="cipher.descencriptar()">
+    <!--Limpiar input-->
+    <input type="button" value="LIMPIAR" onclick="cipher.limpiar()">
+    
     <!--MostrarResultado-->
-    <div id="result">Hola</div>
+    <!--<input type="text" id="result" name="showtext" value="">-->
+    <div id="result">Has ganado la edición:</div>
 
-  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="cipher.js"></script>
   
 </body>
 </html>
