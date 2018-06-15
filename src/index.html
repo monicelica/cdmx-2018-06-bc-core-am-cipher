@@ -3,28 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <title>Cifrado CESAR</title>
+  <!--    CSS    -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!--  ICONOS -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 </head>
-<body>
-<!--formulario-->
-  
-    <!--RangoDeSaltos-->
-    <input type="number" id="jumpt"  name="rango"  min="1" max="26">
-      <!--<input type="submit" value="">-->
-    <!--ParaEncriptar-->
-    <input type="text" id="first" placeholder="Ingresa el titulo" name="encriptartext" value="">
-    <input type="button" value="ENCRIPTAR" onclick="cipher.encriptar()">
-    <!--ParaDescencriptar-->
-    <input type="text" id="second" name="descencriptartext" placeholder="Ingresa tu código" value="">
-    <input type="button" value="DESCENCRIPTAR" onclick="cipher.descencriptar()">
-    <!--Limpiar input-->
-    <input type="button" value="LIMPIAR" onclick="cipher.limpiar()">
-    
-    <!--MostrarResultado-->
-    <!--<input type="text" id="result" name="showtext" value="">-->
-    <div id="result">Has ganado la edición:</div>
+<header>
 
-  <script type="text/javascript" src="app.js"></script>
+</header>
+<body>
+  <h1>
+    Registra tu código para ganar
+  </h1>
+  <content class="columnas">
+    <!--PASO UNO-->
+    <div>
+      <!--ICONO-->
+      <i class="far fa-clipboard"></i>
+      <!--RangoDeSaltos-->
+      <input type="number" id="jumpt"  name="rango"  min="1" max="26">
+    </div>
+    <!--PASO DOS-->
+    <div>
+      <!--ICONO-->
+      <i class="fas fa-pencil-alt"></i>
+      <!--ParaDecodificar-->
+      <input type="text" id="second" name="descencriptartext" placeholder="Ingresa tu código" value="">
+      <input type="button" value="DESCENCRIPTAR" onclick="cipher.decode()">
+      <!--Limpiar input-->
+      <input type="button" value="LIMPIAR" onclick="cipher.limpiar()">
+    </div>
+    <!--PASO TRES-->
+    <div>
+      <!--ICONO-->
+      <i class="fab fa-leanpub"></i>
+      <!--MostrarResultado-->
+      <div id="result">Has ganado la edición:</div>
+    </div>
+    <!--PASO OPCIONAL-->
+    <div>
+      <!--ICONO-->
+      <i class="fas fa-pencil-alt"></i>
+      <!--ParaEncriptar-->
+      <input type="text" id="first" placeholder="Ingresa el titulo" name="encriptartext" value="">
+      <input type="button" value="ENCRIPTAR" onclick="cipher.encode()">
+      <!--Limpiar input-->
+      <input type="button" value="LIMPIAR" onclick="cipher.limpiar()">
+    </div>
+  </content>
+<!--formulario-->
+  <div>
+      
+    
+    
+    
+    
+    
+
+
+
+  </div>
+
   <script type="text/javascript" src="cipher.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  
   
 </body>
 </html>

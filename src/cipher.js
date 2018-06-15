@@ -5,7 +5,9 @@ window.cipher = {
 
 // función para encriptar llamada x el boton"encriptar"
 
-  encriptar: () => {
+  encode: () => {
+  //Mostrar resultado
+  let placeResult= document.getElementById("result");
   //Saltos dentro de un let para respetar numeros
   let jumptA=parseInt(jumpt.value);
   //Input text encriptar
@@ -28,9 +30,9 @@ window.cipher = {
     }
   
   
-}	//Retornar valor d "c" para pintar en pantalla
-	return (placeResult.innerHTML=getNewLetter.join(" "));
-	//console.log(c);
+} //Retornar valor d "c" para pintar en pantalla
+  return (placeResult.innerHTML=getNewLetter.join(" "));
+  //console.log(c);
 },//argumento
 //encriptar(encriptarA)
 
@@ -40,8 +42,9 @@ window.cipher = {
 // función para encriptar llamada x el boton"encriptar"
 
 //función para encriptar llamada x el boton"encriptar"
-  descencriptar: () =>{
-  
+  decode: () =>{
+  //Mostrar resultado
+  let placeResult= document.getElementById("result");
   //Saltos dentro de un let para respetar numeros
   let jumptA=parseInt(jumpt.value);
   //Input text encriptar

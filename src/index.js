@@ -6,13 +6,8 @@ let jumpt = document.getElementById("jumpt");
 //input text descencriptar
 let descencriptarB = document.getElementById("second").value.toLocaleUpperCase();*/
 //Mostrar resultado
-let placeResult= document.getElementById("result");
+//let placeResult= document.getElementById("result");
 
 
 
-
-
-
-
-
-
+//cifrado.addEventListerner={}
