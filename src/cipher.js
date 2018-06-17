@@ -5,33 +5,33 @@ window.cipher = {
 
 // función para encriptar llamada x el boton"encriptar"
 
-  encode: () => {
+  encode: (string, offset) => {
   //Mostrar resultado
   let placeResult= document.getElementById("result");
   //Saltos dentro de un let para respetar numeros
-  let jumptA=parseInt(jumpt.value);
+      offset=parseInt(offset);
   //Input text encriptar
-  let encriptarA = document.getElementById("first").value.toLocaleUpperCase();
-  let getCode = new Array(encriptarA.length );
-  let applyAscci = new Array(encriptarA.length );
-  let getNewLetter = new Array(encriptarA.length );
+      string = string.toLocaleUpperCase();
+  let getCode = new Array(string.length );
+  let applyAscci = new Array(string.length );
+  let getNewLetter = new Array(string.length );
   //obtener letras de la palabra
-  for(let i=0; i<encriptarA.length; i++){
+  for(let i=0; i<string.length; i++){
   //obtener letras de codigo ascii
-  getCode[i]= encriptarA.charCodeAt(i);
+  getCode[i]= string.charCodeAt(i);
    if((getCode[i] >=65) && (getCode[i] <=90)) {
   //Se aplica la formula para conocer su nueva posicion en el codigo ascii 
-    applyAscci[i]= (getCode[i]-65+jumptA)%26+65;
-    //obtener encriptacion
-    getNewLetter[i]=String.fromCharCode(applyAscci[i]);
+    applyAscci[i]= (getCode[i]-65+offset)%26+65;
+    
     }else if(getCode[i]=== 32){
     applyAscci[i]= String.fromCharCode(getCode);
     console.log(applyAscci[i])
     }
-  
+    //obtener encriptacion
+    getNewLetter[i]=String.fromCharCode(applyAscci[i]);
   
 } //Retornar valor d "c" para pintar en pantalla
-  return (placeResult.innerHTML=getNewLetter.join(" "));
+  return getNewLetter.join("");
   //console.log(c);
 },//argumento
 //encriptar(encriptarA)
@@ -42,23 +42,23 @@ window.cipher = {
 // función para encriptar llamada x el boton"encriptar"
 
 //función para encriptar llamada x el boton"encriptar"
-  decode: () =>{
+  decode: (stringDe, offset) =>{
   //Mostrar resultado
   let placeResult= document.getElementById("result");
   //Saltos dentro de un let para respetar numeros
-  let jumptA=parseInt(jumpt.value);
+      offset=parseInt(offset);
   //Input text encriptar
-  let descencriptarB = document.getElementById("second").value.toLocaleUpperCase();
-  let getCode = new Array(descencriptarB.length );
-  let applyAscci = new Array(descencriptarB.length );
-  let getNewLetterA = new Array(descencriptarB.length );
+      stringDe = stringDe.toLocaleUpperCase();
+  let getCode = new Array(stringDe.length );
+  let applyAscci = new Array(stringDe.length );
+  let getNewLetterA = new Array(stringDe.length );
   //obtener letras de la palabra
-  for(let i=0; i<descencriptarB.length; i++){
+  for(let i=0; i<stringDe.length; i++){
   //obtener letras de codigo ascii
-  getCode[i]= descencriptarB.charCodeAt(i);
+  getCode[i]= stringDe.charCodeAt(i);
    if((getCode[i] >=65) && (getCode[i] <=90)) {
   //Se aplica la formula para conocer su nueva posicion en el codigo ascii 
-    applyAscci[i]= (getCode[i]-90-jumptA)%26+90;
+    applyAscci[i]= (getCode[i]-90-offset)%26+90;
     }else if(getCode[i]=== 32){
     applyAscci[i]= String.fromCharCode(getCode[i]);
     console.log(applyAscci[i])
@@ -68,23 +68,23 @@ window.cipher = {
   
 } //Retornar valor d "c" para pintar en pantalla
   
-  return (placeResult.innerHTML=getNewLetterA.join(" "));
+  return getNewLetterA.join("");
   //console.log(c);
 },//argumento
 //encriptar(encriptarA)
 
 
-//limpiar input
+/*limpiar input
   limpiar:()=>{
   //Saltos
-  let jumpt = document.getElementById("jumpt").value = 0;
+  let offset = document.getElementById("offset").innerHTML = 0;
   //Input text encriptar
-  let encriptarA = document.getElementById("first").value = "";
+  let string = document.getElementById("first").innerHTML  = " ";
   //Input text encriptar
-  let descencriptarB = document.getElementById("second").value = "";
+  let stringD = document.getElementById("second").innerHTML = " ";
   //Mostrar resultado
   let placeResult= document.getElementById("result").innerHTML =" ";
-}
+}*/
 
 
 

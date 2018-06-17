@@ -21,7 +21,7 @@
       <!--ICONO-->
       <i class="far fa-clipboard"></i>
       <!--RangoDeSaltos-->
-      <input type="number" id="jumpt"  name="rango"  min="1" max="26">
+      <input type="number" id="offset"  name="rango"  min="1" max="">
     </div>
     <!--PASO DOS-->
     <div>
@@ -29,9 +29,9 @@
       <i class="fas fa-pencil-alt"></i>
       <!--ParaDecodificar-->
       <input type="text" id="second" name="descencriptartext" placeholder="Ingresa tu código" value="">
-      <input type="button" value="DESCENCRIPTAR" onclick="cipher.decode()">
+      <input type="button" value="DESCENCRIPTAR" id="decode">
       <!--Limpiar input-->
-      <input type="button" value="LIMPIAR" onclick="cipher.limpiar()">
+      <!--<input type="button" value="LIMPIAR" onclick="cipher.limpiar()">-->
     </div>
     <!--PASO TRES-->
     <div>
@@ -46,9 +46,9 @@
       <i class="fas fa-pencil-alt"></i>
       <!--ParaEncriptar-->
       <input type="text" id="first" placeholder="Ingresa el titulo" name="encriptartext" value="">
-      <input type="button" value="ENCRIPTAR" onclick="cipher.encode()">
+      <input type="button" value="ENCRIPTAR" id="encode">
       <!--Limpiar input-->
-      <input type="button" value="LIMPIAR" onclick="cipher.limpiar()">
+      <!--<input type="button" value="LIMPIAR" onclick="cipher.limpiar()">-->
     </div>
   </content>
 <!--formulario-->
@@ -65,7 +65,7 @@
   </div>
 
   <script type="text/javascript" src="cipher.js"></script>
-  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="index.js"></script>
   
   
 </body>
