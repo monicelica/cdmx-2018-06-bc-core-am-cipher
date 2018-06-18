@@ -2,67 +2,102 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Cifrado CESAR</title>
+  <link rel="shortcut icon" href="multimedia/pajaro.png">
+  <title>El FANZINE registro</title>
   <!--    CSS    -->
   <link rel="stylesheet" type="text/css" href="style.css">
+  <!--BOOTSTRAP-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <!--  ICONOS -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-</head>
-<header>
+  <!--TIPOGRAFIAS -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
 
-</header>
+
 <body>
-  <h1>
-    Registra tu código para ganar
-  </h1>
-  <content class="columnas">
-    <!--PASO UNO-->
-    <div>
-      <!--ICONO-->
-      <i class="far fa-clipboard"></i>
-      <!--RangoDeSaltos-->
-      <input type="number" id="offset"  name="rango"  min="1" max="">
+  <header>
+  </header>
+  <div class="container">
+    <div class="tit"><h1>
+      Registra tu código para ganar
+    </h1></div>   
+    <!--INSTRUCCIONES-->
+    <div class="row">
+      <!--PASO UNO-->
+      <div class="col">
+        <!--ICONO-->
+        <div class="hand"><img src="multimedia/mano1.png"></div>
+        <div class="pasos">PASO 1</div>
+        <div class="titulo">Núm de tu edición FAV</div>
+        <!--TEXTO-->
+        <div class="instrucciones all">Ingresa el numero de tu edición favorita, por ejemplo  "22"</div>
+        <!--RangoDeSaltos-->
+        <input class="input" type="number" id="offset"  name="rango"  min="1" max="" placeholder="Núm de tu edición FAV">
+      </div>
+      <!--PASO DOS-->
+      <div class="col col12">
+        <!--ICONO-->
+        <div class="hand"><img src="multimedia/mano2.png"></div>
+        <div class="pasos">PASO 2</div>
+        <div class="titulo">Código Obtenido</div>
+        <!--TEXTO-->
+        <div class="instrucciones all">Ingresa tu código formado de 8 dígitos, por ejemplo "MNAELIPA"</div>
+        <!--ParaDecodificar-->
+        <input class="input" type="text" id="second" name="descencriptartext" placeholder="Ingresa tu código" value="">
+        <input class="input button1" type="button" value="DESCENCRIPTAR" id="decode">
+        <!--Limpiar input-->
+        <!--<input type="button" value="LIMPIAR" onclick="cipher.limpiar()">-->
+      </div>
+    <!--</div>
+    <div class="row">-->
+      <!--PASO TRES-->
+      <div class="col col12">
+        <!--ICONO-->
+        <div class="hand"><img src="multimedia/mano3.png"></div>
+        <div class="pasos">PASO 3</div>
+        <div class="titulo">Edición Ganada</div>
+        <!--TEXTO-->
+        <div class="instrucciones all">Obtén el título de la edición especial que haz ganado</div>
+        <!--MostrarResultado-->
+        <div class="result">Te haz ganadado la Edición Especial:</div>
+        <div id="result" class="result A"></div>
+        </div>
+      <!--PASO OPCIONAL-->
+        <div class="col col12">
+        <!--ICONO-->
+        <div class="hand"><img src="multimedia/mano4.png"></div>
+        <div class="pasos">VERIFICACIÓN</div>
+        <div class="titulo">Verificación de Datos</div>
+        <!--TEXTO-->
+        <div class="instrucciones veri">En caso de querer verificar la edición que ganaste, ingresa el título de la casilla "3" y deberas obtener el mismo código que ingresaste en la casilla "1"</div>
+        <!--ParaEncriptar-->
+        <input class="input" type="text" id="first" placeholder="Ingresa el título" name="encriptartext" value="">
+        <input class="input button1" type="button" value="ENCRIPTAR" id="encode">
+        <!--Limpiar input-->
+        <!--<input type="button" value="LIMPIAR" onclick="cipher.limpiar()">-->
+      </div>
     </div>
-    <!--PASO DOS-->
-    <div>
-      <!--ICONO-->
-      <i class="fas fa-pencil-alt"></i>
-      <!--ParaDecodificar-->
-      <input type="text" id="second" name="descencriptartext" placeholder="Ingresa tu código" value="">
-      <input type="button" value="DESCENCRIPTAR" id="decode">
-      <!--Limpiar input-->
-      <!--<input type="button" value="LIMPIAR" onclick="cipher.limpiar()">-->
-    </div>
-    <!--PASO TRES-->
-    <div>
-      <!--ICONO-->
-      <i class="fab fa-leanpub"></i>
-      <!--MostrarResultado-->
-      <div id="result">Has ganado la edición:</div>
-    </div>
-    <!--PASO OPCIONAL-->
-    <div>
-      <!--ICONO-->
-      <i class="fas fa-pencil-alt"></i>
-      <!--ParaEncriptar-->
-      <input type="text" id="first" placeholder="Ingresa el titulo" name="encriptartext" value="">
-      <input type="button" value="ENCRIPTAR" id="encode">
-      <!--Limpiar input-->
-      <!--<input type="button" value="LIMPIAR" onclick="cipher.limpiar()">-->
-    </div>
-  </content>
-<!--formulario-->
-  <div>
-      
-    
-    
-    
-    
-    
+    <footer>
+      <div class="footer">
+        <!--<div class="img"><img src="logo.png"></div>-->
+        <div>
+        <a href="http://elfanzine.tv/" target="_blank">
+          <img src="multimedia/logo.png"></a>
+        <a href="https://twitter.com/lfanzine" target="_blank">
+          <img src="multimedia/boton-de-logo-del-twitter.png"></a>
+        <a href="https://www.facebook.com/elfanzine/?fref=ts" target="_blank">
+          <img src="multimedia/boton-del-logo-de-facebook.png"></a>
+        <a href="https://www.instagram.com/elfanzine/" target="_blank">
+          <img src="multimedia/logo-de-instagram.png"></a>
+        </div>
 
-
-
+      </div>
+    </footer>
   </div>
+
 
   <script type="text/javascript" src="cipher.js"></script>
   <script type="text/javascript" src="index.js"></script>
